@@ -1,8 +1,10 @@
 import 'dotenv/config';
 import express from "express";
+import cors from 'cors'
 import { arr, home, handleForm, showNotes, deleteNote, editNotePage, editNote } from './services/service.js';
 
 const app = express();
+app.use(cors());
 
 // middlewares
 app.use(express.urlencoded({extended:true}));
